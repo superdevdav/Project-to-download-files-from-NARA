@@ -1,10 +1,6 @@
 import requests
 import os
 
-#пусть пользователь сам разрешает удаление файлов
-#проверка на обрыв jpg файла
-#вывести проценты выполнения скачивания
-
 def get_response():
     years_range = f"{' OR '.join([str(n) for n in range(1953, 1971)])}"
     params = {
@@ -13,7 +9,7 @@ def get_response():
         'available online': True,
         'sourceIncludes': 'naId,title,digitalObjects.objectUrl'
     }
-    API_KEY = 'ZkHEi3N5pW1IvFpMRMttx9EEUHoizuj49atOd9ag'
+    API_KEY = '************************************'
     headers = {
         'Content-Type': 'application/json',
         'x-api-key': API_KEY
@@ -30,7 +26,7 @@ def get_image(img_url):
         'available online': True,
         'sourceIncludes': 'naId,title,digitalObjects.objectUrl'
     }
-    API_KEY = 'ZkHEi3N5pW1IvFpMRMttx9EEUHoizuj49atOd9ag'
+    API_KEY = '************************************'
     headers = {
         'Content-Type': 'application/json',
         'x-api-key': API_KEY
